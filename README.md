@@ -8,15 +8,27 @@ Buddy service for MinElev
 
 ## API
 
-### ```/students?name={name}```
+All API calls needs an Authorization header with valid jwt  
 
-### ```/students/{id}```
+### ```GET /students?name={name}```
 
-### ```/students/{id}/contactteachers```
+Search all your students
 
-### ```/teachers/{id}/contactclasses```
+### ```GET /students/{id}```
 
-### ```/classes/{id}/students```
+Get a specific student
+
+### ```GET /students/{id}/contactteachers```
+
+Get all contact teacher for a given student
+
+### ```GET /teachers/{id}/contactclasses```
+
+Get all contact classes for a given teacher
+
+### ```GET /classes/{id}/students```
+
+Get all students in a class
 
 ## License
 
