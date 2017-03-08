@@ -30,6 +30,8 @@ Get all contact classes for a given teacher
 
 Get all students in a class
 
+## Related
+
 ## License
 
 [MIT](LICENSE)
