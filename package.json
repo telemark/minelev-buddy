@@ -41,7 +41,10 @@
       "buddy.minelev.t-fk.win"
     ],
     "env": {
-      "NODE_ENV": "production"
+      "NODE_ENV": "production",
+      "JWT_SECRET": "@minelev-jwt-secret",
+      "BUDDY_API": "@minelev-buddy-service-url"
+
     },
     "type": "npm"
   },
