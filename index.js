@@ -17,19 +17,24 @@ module.exports = async (request, response) => {
     if (!query.action === 'frontpage') {
       response.setHeader('Access-Control-Allow-Origin', '*')
     }
-    if (query.domain === 'students') {
-      const result = await handleStudents(query)
-      send(response, 200, result)
-    } else if (query.domain === 'teachers') {
-      const result = await handleTeachers(query)
-      send(response, 200, result)
-    } else if (query.domain === 'classes') {
-      const result = await handleClasses(query)
-      send(response, 200, result)
-    } else {
-      const readme = readFileSync('./README.md', 'utf-8')
-      const html = marked(readme)
-      send(response, 200, html)
+    try {
+      if (query.domain === 'students') {
+        const result = await handleStudents(query)
+        send(response, 200, result)
+      } else if (query.domain === 'teachers') {
+        const result = await handleTeachers(query)
+        send(response, 200, result)
+      } else if (query.domain === 'classes') {
+        const result = await handleClasses(query)
+        send(response, 200, result)
+      } else {
+        const readme = readFileSync('./README.md', 'utf-8')
+        const html = marked(readme)
+        send(response, 200, html)
+      }
+    } catch (error) {
+      console.error(error)
+      send(response, 500, error)
     }
   }
 }
