@@ -32,6 +32,11 @@ Get all students in a class
 
 ## Related
 
+- [minelev-web](https://github.com/telemark/minelev-web) web frontend for MinElev
+- [minelev-logs](https://github.com/telemark/minelev-logs) logs service for MinElev
+- [minelev-notifications](https://github.com/telemark/minelev-notifications) notifications service for MinElev
+- [minelev-leder](https://github.com/telemark/minelev-leder) web frontend for MinElev - school administration
+
 ## License
 
 [MIT](LICENSE)
