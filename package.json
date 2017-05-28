@@ -64,6 +64,6 @@
     "marked": "0.3.6",
     "micro": "7.3.3",
     "winston": "2.3.1",
-    "winston-papertrail": "1.0.5"
+    "winston-papertrail": "1.0.4"
   }
 }
