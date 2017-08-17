@@ -62,7 +62,7 @@
   },
   "dependencies": {
     "axios": "0.16.2",
-    "jsonwebtoken": "7.4.2",
+    "jsonwebtoken": "7.4.3",
     "marked": "0.3.6",
     "micro": "8.0.2",
     "winston": "2.3.1",
