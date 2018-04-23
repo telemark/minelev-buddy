@@ -68,7 +68,7 @@
     "axios": "0.18.0",
     "jsonwebtoken": "8.2.0",
     "markdown-it": "8.4.1",
-    "micro": "9.1.4",
+    "micro": "9.2.0",
     "winston": "2.4.1",
     "winston-papertrail": "1.0.5"
   }
