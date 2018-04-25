@@ -59,17 +59,17 @@
     "ava": "0.24.0",
     "coveralls": "3.0.0",
     "nsp": "3.2.1",
-    "micro-dev": "2.2.1",
-    "nyc": "11.6.0",
+    "micro-dev": "2.2.2",
+    "nyc": "11.7.1",
     "standard": "11.0.1",
     "test-listen": "1.1.0"
   },
   "dependencies": {
     "axios": "0.18.0",
-    "jsonwebtoken": "8.2.0",
+    "jsonwebtoken": "8.2.1",
     "markdown-it": "8.4.1",
     "micro": "9.3.0",
-    "winston": "2.4.1",
+    "winston": "2.4.2",
     "winston-papertrail": "1.0.5"
   }
 }
