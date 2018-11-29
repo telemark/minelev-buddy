@@ -40,4 +40,3 @@ Get all students in a class
 
 [MIT](LICENSE)
 
-![Robohash image of minelev-buddy](https://robots.kebabstudios.party/minelev-buddy.png "Robohash image of minelev-buddy")
