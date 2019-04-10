@@ -25,6 +25,10 @@ Get all contact teacher for a given student
 
 Get all contact classes for a given teacher
 
+### ```GET /teachers/all```
+
+Get all teachers
+
 ### ```GET /classes/{id}/students```
 
 Get all students in a class
