@@ -9,6 +9,7 @@ const handleTeachers = require('./lib/handle-teachers')
 const handleClasses = require('./lib/handle-classes')
 
 module.exports = async (request, response) => {
+  console.log(request.url)
   const query = await resolveRequest(request)
 
   if (!query.isValid && query.domain !== 'frontpage') {
