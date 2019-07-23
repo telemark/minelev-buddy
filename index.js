@@ -1,8 +1,5 @@
 'use strict'
 
-const readFileSync = require('fs').readFileSync
-const md = require('markdown-it')()
-const { send } = require('micro')
 const resolveRequest = require('./lib/resolve-request')
 const handleStudents = require('./lib/handle-students')
 const handleTeachers = require('./lib/handle-teachers')
@@ -13,28 +10,24 @@ module.exports = async (request, response) => {
   const query = await resolveRequest(request)
 
   if (!query.isValid && query.domain !== 'frontpage') {
-    send(response, 401, query)
+    response.status(401)
+    response.json(query)
   } else {
-    if (!query.action === 'frontpage') {
-      response.setHeader('Access-Control-Allow-Origin', '*')
-    }
+    response.setHeader('Access-Control-Allow-Origin', '*')
     try {
+      let result = {}
       if (query.domain === 'students') {
-        const result = await handleStudents(query)
-        send(response, 200, result)
+        result = await handleStudents(query)
       } else if (query.domain === 'teachers') {
-        const result = await handleTeachers(query)
-        send(response, 200, result)
+        result = await handleTeachers(query)
       } else if (query.domain === 'classes') {
-        const result = await handleClasses(query)
-        send(response, 200, result)
-      } else {
-        const readme = readFileSync('./README.md', 'utf-8')
-        send(response, 200, md.render(readme))
+        result = await handleClasses(query)
       }
+      response.json(result)
     } catch (error) {
       console.error(error)
-      send(response, 500, error)
+      response.status(500)
+      response.send(error)
     }
   }
 }

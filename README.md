@@ -33,6 +33,35 @@ Get all teachers
 
 Get all students in a class
 
+## Development
+
+Add a local `.env`
+
+```
+NODE_ENV=development
+BUDDY_API=api-for-buddy-ws
+JWT_SECRET=jwt-secret
+PAPERTRAIL_HOSTNAME=minelev
+PAPERTRAIL_HOST=tfk-papertrail-host
+PAPERTRAIL_PORT=tfk-papertrail-port
+```
+
+Start the dev environment
+
+```
+$ now dev
+```
+
+## Deploy to ZEIT/Now
+
+Configure [now.json](now.json)
+
+Run the deployment script
+
+```
+$ npm run deploy
+```
+
 ## Related
 
 - [minelev-web](https://github.com/telemark/minelev-web) web frontend for MinElev
