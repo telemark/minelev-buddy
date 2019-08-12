@@ -25,28 +25,12 @@
   ],
   "routes": [
     {
-      "src": "/",
+      "src": "/docs",
       "dest": "/README.html"
-    },
-    {
-      "src": "/students",
-      "dest": "/index.js"
-    },
-    {
-      "src": "/students/(.*)",
-      "dest": "/index.js"
-    },
-    {
-      "src": "/teachers/(.*)",
-      "dest": "/index.js"
-    },
-    {
-      "src": "/classes/(.*)",
-      "dest": "/index.js"
     },
     {
       "src": "/(.*)",
-      "dest": "/README.html"
+      "dest": "/index.js"
     }
   ]
 }
