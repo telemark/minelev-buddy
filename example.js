@@ -17,7 +17,7 @@ const options = {
 
 const token = jwt.sign(payload, config.JWT_SECRET, options)
 
-axios.defaults.headers.common['Authorization'] = token
+axios.defaults.headers.common.Authorization = token
 
 const url = 'http://localhost:3000/students?name=maccyber'
 
